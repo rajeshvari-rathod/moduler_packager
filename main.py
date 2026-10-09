@@ -1,4 +1,5 @@
-from package.math_utils import dt_operator
+from package.math_utils import dt_operator,math_operator,unique_uuid,random_operator
+from package.explore_module import explore_module
 
 def main():
     while True:
@@ -21,13 +22,13 @@ def main():
             dt_operator()
 
         elif choice == 2:
-                   pass
+            math_operator()
        
         elif choice == 3:
-            pass
+            random_operator()
 
         elif choice == 4:
-            pass
+            unique_uuid()
 
         elif choice == 5:
             pass
