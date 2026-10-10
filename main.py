@@ -1,6 +1,6 @@
 from package.math_utils import dt_operator,math_operator,unique_uuid,random_operator
 from package.explore_module import explore_module
-
+from package.file_utils import file_operator
 def main():
     while True:
         print("================================")
@@ -31,10 +31,10 @@ def main():
             unique_uuid()
 
         elif choice == 5:
-            pass
+             file_operator()
 
         elif choice == 6:
-            pass
+            explore_module()
 
         elif choice == 7:
             print("Thank you for using Multi-Utility Toolkit . Goodbye")

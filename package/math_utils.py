@@ -3,7 +3,7 @@ import time
 import math
 from uuid import uuid4
 import random
-
+import string
 
 def dt_operator():
     while True:
@@ -56,8 +56,9 @@ def dt_operator():
         elif choice == 5:
             num = int(input("enter the countdown Timer"))
             while num > 0:
+                print(num)
                 time.sleep(1)
-                num=(-1)
+                num = num -1
                 
         elif choice == 6:
               break
@@ -110,8 +111,8 @@ def math_operator():
                         print("square number is:", square)
 
                  elif choice == 2:
-                         r = float(input("Enter radius: "))
-                         h = float(input("Enter height: "))
+                         r = float(input("Enter the radius number: "))
+                         h = float(input("Enter the height number: "))
                          num = 2 * 3.14 * r * (r + h)
                          print("total area of cylinder =", num)
                  else:
@@ -134,9 +135,29 @@ def random_operator():
         choice = int(input("Enter the Choice Number (1-5)"))
 
         if choice == 1:
-            pass  
-                 
+           num = random.randrange(1,10)
+           print(num)
 
+        elif choice == 2:
+             list = [12,29,19,6,3]
+             random.shuffle(list)
+             print(list)  
+
+        elif choice == 3:
+             len = int(input("Enter the lenght for the password"))
+             character = string.ascii_letters + string.punctuation + string.digits
+             password = "".join(random.choices(character,k=len))       
+             print(f"Generated password {password}\n")
+
+        elif choice == 4:
+              otp = random.randrange(100000,999999)
+              print(otp)
+
+        elif choice == 5:
+              break
+
+        else: 
+             print("Invalid Choice Number")         
 
 
 def unique_uuid():
